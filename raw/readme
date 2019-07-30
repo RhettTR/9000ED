@@ -1,0 +1,38 @@
+printf '\xFF\x00\x00\x00\xFF\x00\x00\x00\xFF' > f
+convert -depth 8 -size 3x1+0 rgb:f out.png
+
+
+
+
+
+83 - 
+convert -depth 16 -size 186x628+0 rgb:outThumb.bin testThumb.tiff
+
+convert -depth 16 -size 186x628+0 rgb:gamma.bin newThumb.tiff
+
+666
+convert -depth 16 -size 1494x1494+0 rgb:outScan.bin testScan.tiff
+convert -depth 16 -size 1494x1494+0 rgb:gamma.bin newScan.tiff
+
+convert -depth 16 -size 1494x1494+0 rgb:outContrast.bin finalScan.tiff
+
+
+
+4000
+convert -depth 16 -size 8964x8964+0 rgb:out.bin Final.tiff
+convert -depth 16 -size 8964x8964+0 rgb:gamma.bin Final.tiff
+
+convert -depth 16 -size 8964x8964+0 rgb:finalContrast.bin Final.tiff
+
+
+
+
+
+./thumb -> testThumb.bin -> convert.c -> outThumb.bin -> average.c
+-> ./gamma -> gamma.bin -> newThumb.tiff
+
+./preview -> testScan.bin -> convert.c -> outScan.bin -> average.c
+-> ./gamma -> gamma.bin -> contrast.c -> outContrast.bin -> finalScan.tiff
+
+./ev -> ./scan -> scan.bin -> convert.c -> out.bin -> average.c
+-> ./gamma -> gamma.bin -> contrast.c ->  finalContrast.bin

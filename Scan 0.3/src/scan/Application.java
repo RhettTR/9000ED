@@ -104,8 +104,6 @@ public class Application extends JFrame {
         file.setExecutable(true);
         file = new File(System.getProperty("java.class.path") + "/scan/c/ev");
         file.setExecutable(true);
-        file = new File(System.getProperty("java.class.path") + "/scan/c/gamma");
-        file.setExecutable(true);
         
         
         
